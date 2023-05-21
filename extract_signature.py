@@ -43,6 +43,7 @@ def extractor(img_path, output_path):
                       (r[1][0], r[1][1]), (0, 255, 0), cv2.FILLED)
         imgShow = cv2.addWeighted(imgShow, 0.99, imgMask, 0.1, 0)
 
+        # Cropped Images of the signatures
         imgCrop = imgScan[r[0][1]:r[1][1], r[0][0]:r[1][0]]
         bg_img = cv2.imread('bd_img.jpg')
 
